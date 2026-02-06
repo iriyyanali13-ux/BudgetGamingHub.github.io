@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builds & Pricing | Gaming Budget Hub</title>
+    <style>
+        :root { --primary-neon: #00ffcc; --bg-deep: #0b0e14; --card-bg: #161b22; --highlight: #ffdb4d; }
+        body.light-mode { --bg-deep: #f4f4f9; --card-bg: #ffffff; color: #333; }
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; transition: 0.3s; }
+        
+        .header { background: rgba(13, 17, 23, 0.95); border-bottom: 2px solid var(--primary-neon); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; position: sticky; top: 0; z-index: 2000; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Highlighting for specific headings */
+        .highlight-header { 
+            color: var(--bg-deep) !important; 
+            background: var(--primary-neon); 
+            padding: 10px; 
+            border-radius: 5px; 
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin-bottom: 35px; transition: 0.3s; position: relative; }
+        .card:hover { box-shadow: 0 0 25px rgba(0, 255, 204, 0.2); border-color: var(--primary-neon); }
+        
+        .price-list { list-style: none; padding: 0; margin: 15px 0; border-left: 2px solid #30363d; padding-left: 20px; }
+        .price-list li { margin-bottom: 8px; font-size: 0.95rem; display: flex; justify-content: space-between; }
+        .part-name { color: #8b949e; }
+        .part-cost { color: var(--highlight); font-weight: bold; font-family: 'Courier New', Courier, monospace; }
+        
+        .total-row { border-top: 1px solid #30363d; margin-top: 10px; padding-top: 10px; font-weight: bold; color: var(--primary-neon); font-size: 1.2rem; }
+        .performance-tag { background: #21262d; padding: 10px; border-radius: 6px; border-left: 3px solid var(--primary-neon); margin-top: 15px; font-size: 0.9rem; }
+        .theme-btn { background: none; border: 1px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 12px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <h1 style="text-align: center; color: var(--primary-neon);">Full Market Price Breakdown (2026)</h1>
+    <p style="text-align: center; color: #8b949e; margin-bottom: 50px;">*All prices are estimated for the Pakistani used market (Hafeez Center/Techno City)*</p>
+
+    <div class="card">
+        <h3>Ultra Budget Starter - 20k</h3>
+        <ul class="price-list">
+            <li><span class="part-name">CPU: Core i5-2400</span> <span class="part-cost">PKR 3,500</span></li>
+            <li><span class="part-name">Motherboard: H61 OEM</span> <span class="part-cost">PKR 4,500</span></li>
+            <li><span class="part-name">GPU: Intel HD / GT 610</span> <span class="part-cost">PKR 3,000</span></li>
+            <li><span class="part-name">RAM: 8GB DDR3</span> <span class="part-cost">PKR 2,500</span></li>
+            <li><span class="part-name">Storage: 128GB SSD + 500GB HDD</span> <span class="part-cost">PKR 4,000</span></li>
+            <li><span class="part-name">Casing & Power Supply</span> <span class="part-cost">PKR 3,000</span></li>
+            <li class="total-row"><span>Approx Total:</span> <span>PKR 20,500</span></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3 class="highlight-header">The E-Sports Entry - 30k</h3>
+        <ul class="price-list">
+            <li><span class="part-name">CPU: Core i5-3470 (3rd Gen)</span> <span class="part-cost">PKR 4,800</span></li>
+            <li><span class="part-name">Motherboard: B75 / H61 High Grade</span> <span class="part-cost">PKR 5,500</span></li>
+            <li><span class="part-name">GPU: GT 1030 2GB GDDR5</span> <span class="part-cost">PKR 11,500</span></li>
+            <li><span class="part-name">RAM: 8GB DDR3 1600MHz</span> <span class="part-cost">PKR 3,000</span></li>
+            <li><span class="part-name">Storage: 256GB SSD</span> <span class="part-cost">PKR 3,500</span></li>
+            <li><span class="part-name">Casing & 300W PSU</span> <span class="part-cost">PKR 2,500</span></li>
+            <li class="total-row"><span>Approx Total:</span> <span>PKR 30,800</span></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3 class="highlight-header">1080p Budget Gamer - 40k</h3>
+        <ul class="price-list">
+            <li><span class="part-name">CPU: Core i5-4570 (4th Gen)</span> <span class="part-cost">PKR 6,500</span></li>
+            <li><span class="part-name">Motherboard: H81 Chipset</span> <span class="part-cost">PKR 6,000</span></li>
+            <li><span class="part-name">GPU: RX 460 2GB / GTX 750 Ti</span> <span class="part-cost">PKR 14,000</span></li>
+            <li><span class="part-name">RAM: 16GB DDR3 Dual Channel</span> <span class="part-cost">PKR 5,500</span></li>
+            <li><span class="part-name">Storage: 256GB SSD + 500GB HDD</span> <span class="part-cost">PKR 5,000</span></li>
+            <li><span class="part-name">PSU: 400W 80+ Bronze</span> <span class="part-cost">PKR 4,000</span></li>
+            <li class="total-row"><span>Approx Total:</span> <span>PKR 41,000</span></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3 class="highlight-header">The Sweet Spot Beast - 50k</h3>
+        <ul class="price-list">
+            <li><span class="part-name">CPU: Ryzen 5 2600 (6C/12T)</span> <span class="part-cost">PKR 13,500</span></li>
+            <li><span class="part-name">Motherboard: A320M Motherboard</span> <span class="part-cost">PKR 9,000</span></li>
+            <li><span class="part-name">GPU: AMD RX 580 8GB (Used)</span> <span class="part-cost">PKR 18,500</span></li>
+            <li><span class="part-name">RAM: 8GB DDR4 3200MHz</span> <span class="part-cost">PKR 5,000</span></li>
+            <li><span class="part-name">Storage: 256GB NVMe SSD</span> <span class="part-cost">PKR 4,500</span></li>
+            <li class="total-row"><span>Approx Total:</span> <span>PKR 50,500</span></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3 class="highlight-header">Pro Performance Build - 60k</h3>
+        <ul class="price-list">
+            <li><span class="part-name">CPU: Ryzen 5 3600</span> <span class="part-cost">PKR 21,000</span></li>
+            <li><span class="part-name">Motherboard: A320M / B350</span> <span class="part-cost">PKR 10,000</span></li>
+            <li><span class="part-name">GPU: GTX 1650 Super 4GB</span> <span class="part-cost">PKR 22,000</span></li>
+            <li><span class="part-name">RAM: 16GB DDR4 3200MHz</span> <span class="part-cost">PKR 8,500</span></li>
+            <li class="total-row"><span>Approx Total:</span> <span>PKR 61,500</span></li>
+        </ul>
+    </div>
+
+</main>
+<script src="main.js"></script>
+</body>
+</html>
