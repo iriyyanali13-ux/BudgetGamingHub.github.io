@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Guides | Gaming Budget Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-neon: #00ffcc;
+            --bg-deep: #0b0e14;
+            --card-bg: #161b22;
+        }
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .header {
+            background: rgba(13, 17, 23, 0.95);
+            border-bottom: 2px solid var(--primary-neon);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 5%; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav a:hover { color: var(--primary-neon); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+        /* Table Styling */
+        .compare-table {
+            width: 100%; border-collapse: collapse; background: var(--card-bg);
+            border-radius: 12px; overflow: hidden; border: 1px solid #30363d; margin-top: 20px;
+        }
+        .compare-table th { background: #21262d; color: var(--primary-neon); text-align: left; padding: 15px; border-bottom: 2px solid var(--primary-neon); }
+        .compare-table td { padding: 15px; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+        .compare-table tr:hover { background: #1c2128; }
+        
+        .theme-btn { background: none; border: 1px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <h2>FPS Performance Comparison</h2>
+    <p>Average FPS at 1080p (Competitive/Low Settings).</p>
+
+    <div style="overflow-x: auto;">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Build Price</th>
+                    <th>Valorant</th>
+                    <th>Minecraft</th>
+                    <th>GTA V</th>
+                    <th>Roblox</th>
+                    <th>Dota 2</th>
+                    <th>Rocket League</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20k PKR</td>
+                    <td>40 (Low)</td>
+                    <td>50+</td>
+                    <td>25 (720p)</td>
+                    <td>50</td>
+                    <td>30</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>30k PKR</td>
+                    <td>90+</td>
+                    <td>100+</td>
+                    <td>40</td>
+                    <td>70+</td>
+                    <td>50</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>40k PKR</td>
+                    <td>144+</td>
+                    <td>180+</td>
+                    <td>60 (Norm)</td>
+                    <td>100+</td>
+                    <td>80+</td>
+                    <td>100+</td>
+                </tr>
+                <tr>
+                    <td>50k PKR</td>
+                    <td>200+</td>
+                    <td>250+</td>
+                    <td>75 (High)</td>
+                    <td>Max</td>
+                    <td>120+</td>
+                    <td>144+</td>
+                </tr>
+                <tr>
+                    <td>60k PKR</td>
+                    <td>240+</td>
+                    <td>400+</td>
+                    <td>90 (High)</td>
+                    <td>Max</td>
+                    <td>160+</td>
+                    <td>200+</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 40px; background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid #30363d;">
+        <canvas id="fpsChart"></canvas>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

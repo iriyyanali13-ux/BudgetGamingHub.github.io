@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builds | Gaming Budget Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-neon: #00ffcc;
+            --bg-deep: #0b0e14;
+            --card-bg: #161b22;
+        }
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .header {
+            background: rgba(13, 17, 23, 0.95);
+            border-bottom: 2px solid var(--primary-neon);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 5%; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav a:hover { color: var(--primary-neon); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Build Card Specifics */
+        .card { 
+            background: var(--card-bg); 
+            border: 1px solid #30363d; 
+            border-radius: 12px; 
+            padding: 25px; 
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary-neon); }
+        .card h3 { color: var(--primary-neon); margin-top: 0; }
+        .theme-btn { background: none; border: 1px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <h2>Best 2nd-Hand Builds (Pakistan)</h2>
+    <p>Current market estimates (2026). Prices depend on local availability.</p>
+
+    <div class="card">
+        <h3>Ultra Budget: 20k PKR</h3>
+        <ul>
+            <li><b>CPU:</b> Core i5-2400 (2nd Gen)</li>
+            <li><b>RAM:</b> 8GB DDR3</li>
+            <li><b>GPU:</b> Intel HD / GT 610 1GB</li>
+            <li><b>Ideal for:</b> Roblox (Low), Browsing, GTA SA</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Entry Gaming: 30k PKR</h3>
+        <ul>
+            <li><b>CPU:</b> Core i5-3470 (3rd Gen)</li>
+            <li><b>RAM:</b> 8GB DDR3</li>
+            <li><b>GPU:</b> GT 1030 / GTX 660 / HD 7570</li>
+            <li><b>Ideal for:</b> Minecraft, Valorant (Low), GTA V (720p)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Mid-Range: 40k PKR</h3>
+        <ul>
+            <li><b>CPU:</b> Core i5-4590 (4th Gen)</li>
+            <li><b>RAM:</b> 16GB DDR3</li>
+            <li><b>GPU:</b> RX 460 2GB / GTX 750 Ti / RX 560</li>
+            <li><b>Ideal for:</b> Valorant (High), GTA V (1080p), Rocket League</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>The Sweet Spot: 50k PKR</h3>
+        <ul>
+            <li><b>CPU:</b> Xeon E3-1240 v3 / i7-4770</li>
+            <li><b>RAM:</b> 16GB RAM</li>
+            <li><b>GPU:</b> RX 580 8GB / GTX 1060 3GB</li>
+            <li><b>Ideal for:</b> Dota 2 (Max), GTA V (High), Modern Titles (Low)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Pro Budget: 60k PKR</h3>
+        <ul>
+            <li><b>CPU:</b> Ryzen 5 2600 / i3-10100F</li>
+            <li><b>RAM:</b> 16GB DDR4 3200MHz</li>
+            <li><b>GPU:</b> RX 580 8GB / GTX 1650 Super</li>
+            <li><b>Ideal for:</b> Streaming, Editing, Competitive Gaming</li>
+        </ul>
+    </div>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
