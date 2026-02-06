@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Guides | Gaming Budget Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-neon: #00ffcc;
+            --bg-deep: #0b0e14;
+            --card-bg: #161b22;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #e6edf3;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            background: rgba(13, 17, 23, 0.95);
+            border-bottom: 2px solid var(--primary-neon);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-neon);
+            text-transform: uppercase;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            color: var(--primary-neon);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .chart-container {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .theme-btn {
+            background: none;
+            border: 1px solid var(--primary-neon);
+            color: var(--primary-neon);
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <h2>FPS Performance Guide</h2>
+    <p>Check how different budget hardware setups perform in popular games at 1080p settings.</p>
+
+    <div class="chart-container">
+        <canvas id="fpsChart"></canvas>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

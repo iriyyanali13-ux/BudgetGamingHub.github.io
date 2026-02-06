@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builds | Gaming Budget Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-neon: #00ffcc; /* Electric Teal */
+            --bg-deep: #0b0e14;
+            --card-bg: #161b22;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #e6edf3;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            background: rgba(13, 17, 23, 0.95);
+            border-bottom: 2px solid var(--primary-neon);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-neon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--primary-neon);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-neon);
+        }
+
+        .card h3 {
+            color: var(--primary-neon);
+            margin-top: 0;
+        }
+
+        .theme-btn {
+            background: none;
+            border: 1px solid var(--primary-neon);
+            color: var(--primary-neon);
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <h2>Cheap Used PC Builds (Pakistan)</h2>
+    <p>Hand-picked hardware combinations for the best price-to-performance ratio in the local market.</p>
+
+    <div class="card">
+        <h3>PC Under 30k PKR (Entry Level)</h3>
+        <ul>
+            <li><b>CPU:</b> Core i5 3rd Gen</li>
+            <li><b>RAM:</b> 8GB DDR3</li>
+            <li><b>Storage:</b> 128GB SSD</li>
+            <li><b>GPU:</b> Intel HD Graphics (Upgradable)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>PC Under 50k PKR (Gaming Ready)</h3>
+        <ul>
+            <li><b>CPU:</b> Ryzen 5 2600</li>
+            <li><b>RAM:</b> 16GB DDR4</li>
+            <li><b>GPU:</b> RX 580 8GB</li>
+            <li><b>Storage:</b> 256GB NVMe</li>
+        </ul>
+    </div>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
