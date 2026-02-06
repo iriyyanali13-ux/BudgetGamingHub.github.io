@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builds | Gaming Budget Hub</title>
+    <style>
+        :root { --primary-neon: #00ffcc; --bg-deep: #0b0e14; --card-bg: #161b22; }
+        body.light-mode { --bg-deep: #f4f4f9; --card-bg: #ffffff; color: #333; }
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; transition: 0.3s; }
+        .header { background: rgba(13, 17, 23, 0.95); border-bottom: 2px solid var(--primary-neon); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; position: sticky; top: 0; z-index: 2000; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .calc-box { background: var(--card-bg); border: 2px solid var(--primary-neon); border-radius: 12px; padding: 25px; margin-bottom: 40px; text-align: center; }
+        select { padding: 10px; background: #0d1117; color: white; border: 1px solid var(--primary-neon); border-radius: 5px; margin: 10px; }
+        .fps-result { font-size: 2rem; font-weight: 800; color: var(--primary-neon); margin-top: 15px; display: block; }
+        .card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin-bottom: 30px; transition: 0.3s; }
+        .card:hover { box-shadow: 0 0 20px rgba(0, 255, 204, 0.3); border-color: var(--primary-neon); }
+        .part-price { color: #ffdb4d; font-family: monospace; }
+        .performance-tag { background: #21262d; padding: 10px; border-radius: 6px; border-left: 3px solid var(--primary-neon); margin-top: 15px; }
+        .theme-btn { background: none; border: 1px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 12px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <section class="calc-box">
+        <h3>🚀 Instant FPS Predictor</h3>
+        <select id="budgetSelect">
+            <option value="30k">30k Build</option>
+            <option value="50k" selected>50k Build</option>
+            <option value="60k">60k Build</option>
+        </select>
+        <select id="gameSelect">
+            <option value="valorant">Valorant</option>
+            <option value="gta5">GTA V</option>
+        </select>
+        <div id="resultDisplay" class="fps-result">220+ FPS</div>
+    </section>
+
+    <h2 style="color: var(--primary-neon);">Market Price Breakdown</h2>
+
+    <div class="card">
+        <h3>30k E-Sports Starter</h3>
+        <p>• i5-3470: <span class="part-price">PKR 4,500</span></p>
+        <p>• GT 1030 2GB GDDR5: <span class="part-price">PKR 12,000</span></p>
+        <p>• 8GB RAM + 256GB SSD: <span class="part-price">PKR 6,500</span></p>
+        <p>• Casing + PSU: <span class="part-price">PKR 7,000</span></p>
+        <div class="performance-tag">Best For: Valorant & Minecraft</div>
+    </div>
+
+    <div class="card">
+        <h3>50k Competitive Beast</h3>
+        <p>• Ryzen 5 2600: <span class="part-price">PKR 14,000</span></p>
+        <p>• RX 580 8GB: <span class="part-price">PKR 18,500</span></p>
+        <p>• A320M Motherboard: <span class="part-price">PKR 8,500</span></p>
+        <p>• 16GB DDR4 RAM: <span class="part-price">PKR 8,000</span></p>
+        <div class="performance-tag">Best For: 1080p High Refresh Gaming</div>
+    </div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
