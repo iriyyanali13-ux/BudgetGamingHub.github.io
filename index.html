@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Budget Hub | Home</title>
+    <style>
+        :root { --primary-neon: #00ffcc; --bg-deep: #0b0e14; --card-bg: #161b22; }
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        
+        /* Header & Nav */
+        .header { background: rgba(13, 17, 23, 0.95); border-bottom: 2px solid var(--primary-neon); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; position: sticky; top: 0; z-index: 2000; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav { display: flex; align-items: center; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav a:hover { color: var(--primary-neon); }
+        .menu-toggle { display: none; font-size: 2rem; color: var(--primary-neon); cursor: pointer; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-deep); border-bottom: 2px solid var(--primary-neon); padding: 20px 0; z-index: 9999; }
+            .nav.active { display: flex !important; }
+            .nav a { margin: 15px 0; font-size: 1.3rem; }
+        }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin-bottom: 20px; }
+        
+        /* ELONGATED VISION STYLES */
+        .vision-card { 
+            border-left: 5px solid var(--primary-neon); 
+            background: linear-gradient(145deg, #1c2128, #161b22); 
+            padding: 40px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .vision-text p { 
+            line-height: 2; 
+            color: #aeb6c2; 
+            margin-bottom: 25px; 
+            font-size: 1.15rem; 
+            text-align: justify;
+        }
+        .vision-text strong { color: var(--primary-neon); }
+        
+        .theme-btn { background: none; border: 1px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 12px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+    <nav class="nav" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <section>
+        <h2 style="color: var(--primary-neon); font-size: 2rem;">The Dashboard</h2>
+        <div class="card">
+            <h3>Current Market King: PKR 50,000 Build</h3>
+            <p>We've tested this rig across 10+ titles. It remains the gold standard for budget performance in 2026.</p>
+        </div>
+    </section>
+
+    <section style="margin-top: 60px; margin-bottom: 80px;">
+        <div class="card vision-card">
+            <h2 style="color: var(--primary-neon); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px;">Our Vision</h2>
+            <div class="vision-text">
+                <p>
+                    At <strong>Gaming Budget Hub</strong>, our perspective is built on a fundamental, unwavering truth: <strong>Gaming belongs to everyone.</strong> It is not just a pastime; it is a gateway to creativity, competition, and community. Our vision is to provide every individual—from the student saving up their lunch money for a first rig to the seasoned enthusiast looking for a secondary setup—with accessible, transparent, and professional-grade tech insights.
+                </p>
+                <p>
+                    We operate with the firm belief that high-performance gaming should never be a luxury reserved for the few. In a challenging economic landscape where hardware prices fluctuate daily and "new" tech feels out of reach, our mission is to <strong>democratize technology</strong>. We aim to empower the Pakistani gaming community by proving that with the right optimization, deep market knowledge, and a bit of grit, a limited budget can still yield a "beast" of a machine.
+                </p>
+                <p>
+                    We are more than just a price list. We specialize in the <strong>art of the used market</strong>. From the crowded lanes of Hafeez Center to the tech hubs of Techno City, we bridge the gap between affordability and performance. By conducting real-world benchmarks on older but capable architectures like Xeon and early Ryzen, we ensure that you are making an investment, not just a purchase.
+                </p>
+                <p>
+                    Ultimately, we want to foster a culture of <strong>Smart Buying</strong>. Our goal is to create a hub where knowledge is the ultimate GPU upgrade. We want to ensure that in our community, your passion for gaming is never silenced by the size of your wallet. <strong>Budget is a challenge, not a barrier.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
