@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Budget Hub | Home</title>
+    <style>
+        :root { --primary-neon: #00ffcc; --bg-deep: #0b0e14; --card-bg: #161b22; }
+        body.light-mode { --bg-deep: #f0f2f5; --card-bg: #ffffff; color: #1c1e21; }
+        body.light-mode .card, body.light-mode .header { background: #ffffff; border-color: #ddd; }
+        body.light-mode .vision-text p { color: #444; }
+        body.light-mode .featured-specs li { background: #f7f9fb; border-color: var(--primary-neon); }
+
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; transition: 0.3s; }
+        .header { background: rgba(13, 17, 23, 0.95); border-bottom: 2px solid var(--primary-neon); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; position: sticky; top: 0; z-index: 2000; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav a:hover { color: var(--primary-neon); }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 20px; }
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1587202377425-8b90ed50ef4a?auto=format&fit=crop&q=80&w=2000'); background-size: cover; border-radius: 15px; border: 1px solid #30363d; margin-bottom: 40px; }
+        
+        .card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 12px; padding: 25px; transition: 0.3s; }
+        .featured-specs { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .featured-specs li { background: #0d1117; padding: 12px; border-radius: 8px; border-left: 3px solid var(--primary-neon); font-size: 0.9rem; }
+
+        .theme-btn { background: none; border: 2px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 12px; border-radius: 20px; font-size: 1.2rem; }
+        .vision-card { border-top: 4px solid var(--primary-neon); }
+        .vision-text p { line-height: 1.8; color: #8b949e; font-size: 1.05rem; }
+
+        /* --- DARAZ BUTTON STYLING START --- */
+        .daraz-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary-neon);
+            color: #0b0e14;
+            text-decoration: none;
+            font-weight: 800;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .daraz-btn:hover {
+            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
+        }
+
+        body.light-mode .daraz-btn {
+            color: #fff;
+            background: #00bd97;
+        }
+        /* --- DARAZ BUTTON STYLING END --- */
+
+        @media (max-width: 768px) {
+            .header { flex-direction: column; padding: 1rem; }
+            .nav { margin-top: 15px; }
+            .nav a { margin: 0 10px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+        <a href="fps-counter.html">FPS Counter</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h1 style="color: var(--primary-neon); font-size: 2.5rem; margin-bottom: 10px;">Build Your Dream PC on a Budget</h1>
+        <p style="font-size: 1.2rem; color: #c9d1d9;">Expert guides for PKR 20k to 60k gaming setups in Pakistan.</p>
+    </section>
+
+    <section>
+        <h2 style="color: var(--primary-neon);">Featured Build: The 40k King</h2>
+        <div class="card">
+            <p>Our most recommended build for competitive eSports (Valorant, CS2, Dota 2).</p>
+            <ul class="featured-specs">
+                <li><b>CPU:</b> Ryzen 5 2600</li>
+                <li><b>GPU:</b> RX 580 8GB</li>
+                <li><b>RAM:</b> 8GB DDR4</li>
+                <li><b>Storage:</b> 256GB NVMe + HDD</li>
+            </ul>
+        </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+        <h2 style="color: var(--primary-neon);">Used Parts Buyer's Guide</h2>
+        <div class="card" style="border-top: 3px solid #ff4d4d;">
+            <p>Don't get scammed in the used market. Run these tests before buying:</p>
+            <ul class="featured-specs">
+                <li><b>1. GPU Stress</b> Run FurMark for 15 mins. Max temp should be < 85°C.</li>
+                <li><b>2. Drive Health</b> Use CrystalDiskInfo. Must be 100% / Good.</li>
+                <li><b>3. Power Stability</b> Restart the PC 3 times to test the PSU.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+        <h2 style="color: var(--primary-neon);">Daraz Pre-Built Recommendations</h2>
+        <p style="color: #8b949e; margin-bottom: 20px;">If you don't want to build it yourself, these are the best value-for-money pre-built options available today.</p>
+
+        <div class="card" style="border-top: 3px solid #00ffcc; margin-bottom: 20px;">
+            <h3 style="color: #fff; margin-bottom: 10px;">The Entry Level Gamer (Refurbished)</h3>
+            <ul class="featured-specs">
+                <li><b>Processor:</b> Core i5 4th Generation</li>
+                <li><b>Memory:</b> 8GB DDR3 RAM</li>
+                <li><b>Storage:</b> 128GB SSD + 500GB HDD</li>
+                <li><b>Graphics:</b> Intel HD Graphics (Upgradable)</li>
+            </ul>
+            <a href="https://www.daraz.pk/products/core-i5-4th-gen-8gb-ram-500gb-hdd-128gb-ssd-desktop-pc-i435372421.html" target="_blank" class="daraz-btn">View on Daraz</a>
+        </div>
+
+        <div class="card" style="border-top: 3px solid #ffdb4d; margin-bottom: 20px;">
+            <h3 style="color: #fff; margin-bottom: 10px;">The Performance Tier (Custom Build)</h3>
+            <ul class="featured-specs">
+                <li><b>Processor:</b> Core i5 6th Generation</li>
+                <li><b>Memory:</b> 16GB DDR4 RAM</li>
+                <li><b>Storage:</b> 256GB NVMe SSD</li>
+                <li><b>Graphics:</b> AMD RX 580 8GB (Dedicated)</li>
+            </ul>
+            <a href="https://www.daraz.pk/catalog/?q=gaming+pc+rx+580" target="_blank" class="daraz-btn">View on Daraz</a>
+        </div>
+
+        <div class="card" style="border-top: 3px solid #ff4d4d; margin-bottom: 20px;">
+            <h3 style="color: #fff; margin-bottom: 10px;">The Modern Gamer (New Parts)</h3>
+            <ul class="featured-specs">
+                <li><b>Processor:</b> Ryzen 5 3600 / 5600G</li>
+                <li><b>Memory:</b> 16GB 3200MHz DDR4</li>
+                <li><b>Storage:</b> 512GB NVMe SSD</li>
+                <li><b>Motherboard:</b> A520M / B450M</li>
+            </ul>
+            <a href="https://www.daraz.pk/catalog/?q=ryzen+5+gaming+pc" target="_blank" class="daraz-btn">View on Daraz</a>
+        </div>
+    </section>
+    <section style="margin-top: 40px;">
+        <div class="card vision-card">
+            <h2 style="color: var(--primary-neon);">Our Vision</h2>
+            <div class="vision-text">
+                <p>At <strong>Gaming Budget Hub</strong>, our perspective is built on a fundamental, unwavering truth: <strong>Gaming belongs to everyone.</strong> It is not just a pastime; it is a gateway to creativity, competition, and community.</p>
+                <p>Ultimately, we want to foster a culture of <strong>Smart Buying</strong>. Our goal is to create a hub where knowledge is the ultimate GPU upgrade. <strong>Budget is a challenge, not a barrier.</strong></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer style="text-align: center; padding: 40px; color: #8b949e; border-top: 1px solid #30363d; margin-top: 40px;">
+    &copy; 2024 Gaming Budget Hub. All hardware prices are based on the Pakistani market.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
