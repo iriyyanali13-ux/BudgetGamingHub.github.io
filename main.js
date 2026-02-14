@@ -41,24 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if(budget) budget.addEventListener('change', updateFPS);
     if(game) game.addEventListener('change', updateFPS);
 
-    // 4. CHART GENERATION (Added this part)
+    // 4. CHART LOGIC (Added this section)
     const chartCanvas = document.getElementById('fpsPieChart');
     if (chartCanvas) {
         new Chart(chartCanvas, {
-            type: 'doughnut', // You can change this to 'pie' or 'bar' if you prefer
+            type: 'pie', // You can also use 'doughnut'
             data: {
                 labels: ['20k Build', '30k Build', '40k Build', '50k Build', '60k Build'],
                 datasets: [{
-                    label: 'Valorant FPS',
+                    label: 'Valorant FPS Performance',
                     data: [45, 90, 144, 220, 280], // Matches your table data
                     backgroundColor: [
                         '#ff4d4d', // Red
                         '#ffdb4d', // Yellow
-                        '#00ffcc', // Your Primary Neon
+                        '#00ffcc', // Primary Neon
                         '#36a2eb', // Blue
                         '#9966ff'  // Purple
                     ],
-                    borderColor: '#161b22', // Matches card background for clean separation
+                    borderColor: '#161b22', // Matches card background
                     borderWidth: 2
                 }]
             },
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'bottom',
                         labels: {
-                            color: '#8b949e', // Matches your text color
+                            color: '#8b949e',
                             font: { family: "'Segoe UI', sans-serif" }
                         }
                     }
