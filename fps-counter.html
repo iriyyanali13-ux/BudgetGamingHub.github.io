@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Counter | Gaming Budget Hub</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        :root { --primary-neon: #00ffcc; --bg-deep: #0b0e14; --card-bg: #161b22; }
+        body.light-mode { --bg-deep: #f0f2f5; --card-bg: #ffffff; color: #1c1e21; }
+
+        /* Light Mode Navigation Fix */
+        body.light-mode .nav a { color: #1c1e21 !important; }
+        body.light-mode .nav a:hover, body.light-mode .nav a.active { color: #008f72 !important; }
+        body.light-mode .menu-toggle { color: #1c1e21 !important; }
+
+        /* Light Mode Footer Fix */
+        body.light-mode footer { background: #ffffff !important; border-top: 1px solid #ddd !important; }
+        body.light-mode footer p, body.light-mode footer a { color: #1c1e21 !important; }
+        body.light-mode footer p[style*="var(--primary-neon)"] { color: #008f72 !important; }
+
+        body { background-color: var(--bg-deep); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; transition: 0.3s; }
+        .header { background: rgba(13, 17, 23, 0.95); border-bottom: 2px solid var(--primary-neon); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; position: sticky; top: 0; z-index: 2000; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-neon); text-transform: uppercase; }
+        .nav { display: flex; align-items: center; }
+        .nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav a:hover { color: var(--primary-neon); }
+        .nav a.active { color: var(--primary-neon); border-bottom: 2px solid var(--primary-neon); padding-bottom: 5px; }
+        .menu-toggle { display: none; font-size: 2rem; color: var(--primary-neon); cursor: pointer; }
+        .theme-btn { background: none; border: 1px solid var(--primary-neon); color: var(--primary-neon); cursor: pointer; padding: 5px 12px; border-radius: 5px; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-deep); border-bottom: 2px solid var(--primary-neon); padding: 20px 0; }
+            .nav.active { display: flex !important; }
+        }
+
+        .container { max-width: 600px; margin: 60px auto; padding: 0 20px; text-align: center; }
+        .card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 12px; padding: 30px; transition: 0.3s; }
+        .fps-value { font-size: 3rem; font-weight: 800; color: var(--primary-neon); margin: 20px 0; }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo">Gaming Budget Hub</div>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+    <nav class="nav" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="builds.html">PC Builds</a>
+        <a href="fps-guides.html">FPS Guides</a>
+        <a href="fps-counter.html" class="active">FPS Counter</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2 style="color: var(--primary-neon);">FPS Calculator</h2>
+        <div id="resultDisplay" class="fps-value">45+ FPS</div>
+    </div>
+</main>
+
+<footer style="background: #0d1117; border-top: 1px solid #30363d; padding: 40px 20px; text-align: center; margin-top: 50px;">
+    <p style="color: var(--primary-neon); font-weight: 600;">GAMING BUDGET HUB</p>
+    <p style="color: #8b949e; font-size: 0.9rem;">Your guide to budget gaming in Pakistan.</p>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
